@@ -1,59 +1,59 @@
 import { useState, useEffect, useCallback } from "react";
 
 const G = {
-  bg: "#080807",
-  surface: "#101010",
-  border: "#1c1b19",
-  accent: "#c8a050",
-  cream: "#f0ebe0",
-  muted: "#6b6660",
-  serif: "'Cormorant Garamond', Georgia, serif",
-  sans: "'DM Sans', system-ui, sans-serif",
+  white:  "#eeeeee",
+  off:    "#dddddd",
+  border: "#cccccc",
+  ink:    "#1a1a1a",
+  muted:  "#aaaaaa",
+  sans:   "'Poppins', system-ui, sans-serif",
+  body:   "'DM Sans', system-ui, sans-serif",
 };
 
-const CATS = ["All", "Landscape", "Portrait", "Urban", "Nature"];
-
 const PHOTOS = [
-  { id: 1,  cat: "Landscape", w: 900, h: 600, seed: "volcanic15",   title: "Morning Mist",     loc: "Iceland" },
-  { id: 2,  cat: "Portrait",  w: 600, h: 900, seed: "face64",       title: "Quiet Gaze",       loc: "Paris" },
-  { id: 3,  cat: "Urban",     w: 900, h: 600, seed: "tokyo37",      title: "City Lines",       loc: "Tokyo" },
-  { id: 4,  cat: "Nature",    w: 900, h: 600, seed: "bloom82",      title: "Wild Bloom",       loc: "Tuscany" },
-  { id: 5,  cat: "Portrait",  w: 600, h: 900, seed: "portrait91",   title: "Golden Hour",      loc: "Barcelona" },
-  { id: 6,  cat: "Landscape", w: 900, h: 600, seed: "fjord23",      title: "Open Waters",      loc: "Norway" },
-  { id: 7,  cat: "Urban",     w: 900, h: 600, seed: "concrete47",   title: "Concrete Dreams",  loc: "New York" },
-  { id: 8,  cat: "Nature",    w: 600, h: 900, seed: "forest55",     title: "Forest Still",     loc: "Oregon" },
-  { id: 9,  cat: "Landscape", w: 900, h: 600, seed: "desert11",     title: "Dusk Roads",       loc: "Patagonia" },
-  { id: 10, cat: "Portrait",  w: 600, h: 900, seed: "soft73",       title: "Soft Light",       loc: "Amsterdam" },
-  { id: 11, cat: "Urban",     w: 900, h: 600, seed: "nightmkt29",   title: "Night Market",     loc: "Seoul" },
-  { id: 12, cat: "Nature",    w: 900, h: 600, seed: "storm68",      title: "Storm Coming",     loc: "Scotland" },
-  { id: 13, cat: "Landscape", w: 900, h: 600, seed: "alpine44",     title: "Above the Clouds", loc: "Swiss Alps" },
-  { id: 14, cat: "Portrait",  w: 600, h: 900, seed: "shadow19",     title: "Half Shadow",      loc: "Havana" },
-  { id: 15, cat: "Urban",     w: 900, h: 600, seed: "alley88",      title: "Side Street",      loc: "Lisbon" },
+  { id:1,  cat:"Events",    w:900, h:600, seed:"event01",   title:"Grad Night"      },
+  { id:2,  cat:"Concerts",  w:900, h:600, seed:"concert22", title:"Main Stage"      },
+  { id:3,  cat:"Portraits", w:600, h:900, seed:"port44",    title:"Sam"             },
+  { id:4,  cat:"Events",    w:900, h:600, seed:"event55",   title:"Frosh Week"      },
+  { id:5,  cat:"Concerts",  w:900, h:600, seed:"concert77", title:"Sold Out"        },
+  { id:6,  cat:"Portraits", w:600, h:900, seed:"port88",    title:"Golden Hour"     },
+  { id:7,  cat:"General",   w:900, h:600, seed:"gen11",     title:"Sunday Market"   },
+  { id:8,  cat:"Events",    w:900, h:600, seed:"event33",   title:"Prom 2025"       },
+  { id:9,  cat:"Portraits", w:600, h:900, seed:"port99",    title:"Anya"            },
+  { id:10, cat:"Concerts",  w:900, h:600, seed:"concert44", title:"Festival Season" },
+  { id:11, cat:"General",   w:900, h:600, seed:"gen66",     title:"City Light"      },
+  { id:12, cat:"Events",    w:900, h:600, seed:"event88",   title:"Club Night"      },
+  { id:13, cat:"Portraits", w:600, h:900, seed:"port22",    title:"Marcus"          },
+  { id:14, cat:"Concerts",  w:900, h:600, seed:"concert11", title:"Front Row"       },
+  { id:15, cat:"General",   w:600, h:900, seed:"gen33",     title:"Evening Walk"    },
+];
+
+const CONTACT = [
+  ["Email",     "parmarvishva2015@gmail.com"],
+  ["Instagram", "@vip_vish_"],
+  ["Location",  "San Diego, CA"],
 ];
 
 export default function Portfolio() {
-  const [filter, setFilter]     = useState("All");
-  const [lightbox, setLightbox] = useState(null);
-  const [section, setSection]   = useState("work");
-  const [loaded, setLoaded]     = useState({});
-
-  const filtered = filter === "All" ? PHOTOS : PHOTOS.filter(p => p.cat === filter);
+  const [lightbox,  setLightbox]  = useState(null);
+  const [loaded,    setLoaded]    = useState({});
+  const [contact,   setContact]   = useState(false);
 
   const navigate = useCallback((dir) => {
     if (!lightbox) return;
-    const idx = filtered.findIndex(p => p.id === lightbox.id);
-    setLightbox(filtered[(idx + dir + filtered.length) % filtered.length]);
-  }, [lightbox, filtered]);
+    const idx = PHOTOS.findIndex(p => p.id === lightbox.id);
+    setLightbox(PHOTOS[(idx + dir + PHOTOS.length) % PHOTOS.length]);
+  }, [lightbox]);
 
   useEffect(() => {
     if (!lightbox) return;
-    const handler = (e) => {
-      if (e.key === "Escape")      setLightbox(null);
-      if (e.key === "ArrowRight")  navigate(1);
-      if (e.key === "ArrowLeft")   navigate(-1);
+    const h = (e) => {
+      if (e.key === "Escape")     setLightbox(null);
+      if (e.key === "ArrowRight") navigate(1);
+      if (e.key === "ArrowLeft")  navigate(-1);
     };
-    window.addEventListener("keydown", handler);
-    return () => window.removeEventListener("keydown", handler);
+    window.addEventListener("keydown", h);
+    return () => window.removeEventListener("keydown", h);
   }, [lightbox, navigate]);
 
   useEffect(() => {
@@ -61,262 +61,215 @@ export default function Portfolio() {
     return () => { document.body.style.overflow = ""; };
   }, [lightbox]);
 
-  const imgUrl = (seed, w, h) => `https://picsum.photos/seed/${seed}/${w}/${h}`;
+  // Close contact panel when clicking outside
+  useEffect(() => {
+    if (!contact) return;
+    const h = (e) => {
+      if (!e.target.closest(".contact-panel") && !e.target.closest(".contact-trigger"))
+        setContact(false);
+    };
+    document.addEventListener("mousedown", h);
+    return () => document.removeEventListener("mousedown", h);
+  }, [contact]);
 
-  const lbIdx = lightbox ? filtered.findIndex(p => p.id === lightbox.id) : -1;
+  const imgUrl = (seed, w, h) => `https://picsum.photos/seed/${seed}/${w}/${h}`;
 
   return (
     <>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"
-        rel="stylesheet"
-      />
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet" />
       <style>{`
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        body { background: ${G.bg}; }
-        ::selection { background: ${G.accent}22; }
-        .masonry { columns: 3 240px; column-gap: 6px; }
-        .masonry-item {
-          break-inside: avoid;
-          margin-bottom: 6px;
+        body { background: ${G.white}; }
+
+        .grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 8px;
+        }
+        @media(max-width:760px){ .grid { grid-template-columns: repeat(2,1fr); } }
+        @media(max-width:460px){ .grid { grid-template-columns: 1fr; } }
+
+        .card {
           cursor: pointer;
           position: relative;
           overflow: hidden;
-          background: ${G.surface};
+          border-radius: 10px;
+          background: ${G.off};
         }
-        .masonry-item img {
-          width: 100%;
-          display: block;
-          transition: transform 0.55s cubic-bezier(.25,.46,.45,.94);
-          filter: brightness(0.92);
+        .card img {
+          width: 100%; height: 100%; object-fit: cover; display: block;
+          transition: transform 0.48s cubic-bezier(.25,.46,.45,.94);
         }
-        .masonry-item:hover img {
-          transform: scale(1.06);
-          filter: brightness(1);
+        .card:hover img { transform: scale(1.05); }
+        .card-cap {
+          position: absolute; inset: 0; border-radius: 10px;
+          background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 50%);
+          opacity: 0; transition: opacity 0.24s ease;
+          display: flex; align-items: flex-end; padding: 14px;
         }
-        .photo-cap {
-          position: absolute; inset: 0;
-          background: linear-gradient(to top, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.1) 45%, transparent 70%);
-          opacity: 0;
-          transition: opacity 0.32s ease;
-          display: flex; align-items: flex-end;
-          padding: 18px;
-        }
-        .masonry-item:hover .photo-cap { opacity: 1; }
-        .skeleton {
-          position: absolute; inset: 0;
-          background: ${G.surface};
-          animation: shimmer 1.6s ease-in-out infinite;
-        }
-        @keyframes shimmer {
-          0%,100% { opacity: 1; }
-          50% { opacity: 0.4; }
-        }
-        .nav-link {
-          background: none; border: none; cursor: pointer;
-          font-family: ${G.sans}; font-size: 12px; font-weight: 400;
-          letter-spacing: 0.12em; text-transform: uppercase;
-          color: ${G.muted}; padding: 0;
-          transition: color 0.2s;
-        }
-        .nav-link:hover { color: ${G.cream}; }
-        .nav-link.on { color: ${G.cream}; }
-        .filter-pill {
-          background: none; border: none; cursor: pointer;
-          font-family: ${G.sans}; font-size: 11px; font-weight: 400;
-          letter-spacing: 0.12em; text-transform: uppercase;
-          color: ${G.muted}; padding: 14px 18px;
-          border-bottom: 1px solid transparent;
-          transition: color 0.2s, border-color 0.2s;
-        }
-        .filter-pill:hover { color: ${G.cream}; }
-        .filter-pill.on { color: ${G.cream}; border-bottom-color: ${G.accent}; }
+        .card:hover .card-cap { opacity: 1; }
+
         .lb-arrow {
           position: absolute; top: 50%; transform: translateY(-50%);
-          background: none; border: 1px solid #1c1b19;
-          color: ${G.muted}; cursor: pointer; font-size: 20px;
-          width: 48px; height: 48px; display: flex; align-items: center; justify-content: center;
-          transition: color 0.2s, border-color 0.2s;
+          background: rgba(255,255,255,0.1); border: 1.5px solid rgba(255,255,255,0.18);
+          color: #fff; cursor: pointer; border-radius: 50%;
+          width: 44px; height: 44px; font-size: 20px;
+          display: flex; align-items: center; justify-content: center;
+          transition: background 0.18s;
         }
-        .lb-arrow:hover { color: ${G.cream}; border-color: ${G.muted}; }
-        .contact-row {
-          display: flex; align-items: baseline; gap: 28px;
-          padding: 16px 0; border-bottom: 1px solid #1c1b19;
+        .lb-arrow:hover { background: rgba(255,255,255,0.22); }
+
+        .contact-trigger {
+          background: none; border: 1.5px solid ${G.border};
+          border-radius: 999px; cursor: pointer;
+          font-family: ${G.body}; font-size: 13px; font-weight: 500;
+          color: ${G.muted}; padding: 6px 16px;
+          transition: all 0.16s ease;
         }
-        .contact-row:first-child { border-top: 1px solid #1c1b19; }
-        @media (max-width: 600px) {
-          .masonry { columns: 2 140px; }
-          header { padding: 0 20px !important; }
-          .content-pad { padding-left: 20px !important; padding-right: 20px !important; }
+        .contact-trigger:hover,
+        .contact-trigger.open {
+          border-color: ${G.ink}; color: ${G.ink};
+        }
+
+        .contact-panel {
+          position: absolute; top: calc(100% + 10px); right: 0;
+          background: ${G.white}; border: 1px solid ${G.border};
+          border-radius: 14px; padding: 22px 24px;
+          min-width: 240px;
+          box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+          animation: pop 0.18s cubic-bezier(.34,1.56,.64,1);
+          z-index: 100;
+        }
+        @keyframes pop {
+          from { opacity: 0; transform: translateY(-6px) scale(0.97); }
+          to   { opacity: 1; transform: translateY(0)   scale(1);    }
+        }
+
+        @media(max-width:600px){
+          header { padding: 0 16px !important; }
+          .pad   { padding: 0 10px !important; }
         }
       `}</style>
 
-      <div style={{ minHeight: "100vh", background: G.bg, color: G.cream, fontFamily: G.sans }}>
+      <div style={{ minHeight:"100vh", background:G.white, fontFamily:G.body, color:G.ink }}>
 
-        {/* Header */}
+        {/* ── Header ── */}
         <header style={{
-          position: "sticky", top: 0, zIndex: 50,
-          background: G.bg, borderBottom: `1px solid ${G.border}`,
-          padding: "0 48px", height: 58,
-          display: "flex", alignItems: "center", justifyContent: "space-between",
+          position:"sticky", top:0, zIndex:50,
+          background:"rgba(255,255,255,0.92)", backdropFilter:"blur(10px)",
+          borderBottom:`1px solid ${G.border}`,
+          padding:"0 28px", height:54,
+          display:"flex", alignItems:"center", justifyContent:"space-between",
         }}>
-          <button
-            className="nav-link on"
-            style={{ fontFamily: G.serif, fontSize: 18, fontWeight: 300, letterSpacing: "0.04em", textTransform: "none" }}
-            onClick={() => setSection("work")}
-          >
-            Alex Mercer
-          </button>
-          <nav style={{ display: "flex", gap: 36 }}>
-            <button className={`nav-link ${section === "work" ? "on" : ""}`} onClick={() => setSection("work")}>Work</button>
-            <button className={`nav-link ${section === "about" ? "on" : ""}`} onClick={() => setSection("about")}>About</button>
-          </nav>
-        </header>
+          <span style={{ fontFamily:G.sans, fontSize:15, fontWeight:700, letterSpacing:"-0.01em" }}>
+            Vishva Parmar
+          </span>
 
-        {section === "work" ? (
-          <>
-            {/* Hero */}
-            <div className="content-pad" style={{ padding: "72px 48px 52px", borderBottom: `1px solid ${G.border}` }}>
-              <p style={{ fontSize: 10, letterSpacing: "0.22em", textTransform: "uppercase", color: G.accent, marginBottom: 18 }}>
-                Photography · {new Date().getFullYear()}
-              </p>
-              <h1 style={{
-                fontFamily: G.serif, fontSize: "clamp(52px, 8vw, 100px)",
-                fontWeight: 300, lineHeight: 1.0, color: G.cream, marginBottom: 28,
-              }}>
-                <em>Seeing</em> the world<br />differently.
-              </h1>
-              <p style={{ fontSize: 14, color: G.muted, maxWidth: 420, lineHeight: 1.85 }}>
-                Landscapes, portraits, and quiet moments found between places — a visual journal spanning five continents.
-              </p>
-            </div>
+          {/* Contact trigger + panel */}
+          <div style={{ position:"relative" }}>
+            <button
+              className={`contact-trigger${contact?" open":""}`}
+              onClick={() => setContact(c => !c)}
+            >
+              Contact
+            </button>
 
-            {/* Filters */}
-            <div style={{ borderBottom: `1px solid ${G.border}`, display: "flex", paddingLeft: 30 }}>
-              {CATS.map(cat => (
-                <button key={cat} className={`filter-pill ${filter === cat ? "on" : ""}`} onClick={() => setFilter(cat)}>
-                  {cat}
-                </button>
-              ))}
-            </div>
-
-            {/* Grid */}
-            <div className="content-pad" style={{ padding: "16px 16px 80px" }}>
-              <div className="masonry">
-                {filtered.map(photo => (
-                  <div key={photo.id} className="masonry-item" onClick={() => setLightbox(photo)}>
-                    {!loaded[photo.id] && (
-                      <div className="skeleton" style={{ paddingBottom: `${(photo.h / photo.w) * 100}%` }} />
-                    )}
-                    <img
-                      src={imgUrl(photo.seed, photo.w, photo.h)}
-                      alt={photo.title}
-                      loading="lazy"
-                      onLoad={() => setLoaded(l => ({ ...l, [photo.id]: true }))}
-                      style={{ opacity: loaded[photo.id] ? 1 : 0, transition: "opacity 0.4s" }}
-                    />
-                    <div className="photo-cap">
-                      <div>
-                        <div style={{ fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: G.accent, marginBottom: 5 }}>
-                          {photo.cat}
-                        </div>
-                        <div style={{ fontFamily: G.serif, fontSize: 19, fontStyle: "italic", color: G.cream, lineHeight: 1.1 }}>
-                          {photo.title}
-                        </div>
-                        <div style={{ fontSize: 11, color: "rgba(240,235,224,0.45)", marginTop: 3 }}>
-                          {photo.loc}
-                        </div>
-                      </div>
-                    </div>
+            {contact && (
+              <div className="contact-panel">
+                <p style={{ fontSize:11, textTransform:"uppercase", letterSpacing:"0.1em", color:G.muted, marginBottom:16 }}>
+                  Get in touch
+                </p>
+                {CONTACT.map(([label, val]) => (
+                  <div key={label} style={{ marginBottom:14 }}>
+                    <div style={{ fontSize:11, color:G.muted, marginBottom:2 }}>{label}</div>
+                    <div style={{ fontSize:14, fontWeight:500, color:G.ink }}>{val}</div>
                   </div>
                 ))}
               </div>
-            </div>
-          </>
-        ) : (
-          /* About */
-          <div className="content-pad" style={{ maxWidth: 760, margin: "0 auto", padding: "80px 48px 100px" }}>
-            <p style={{ fontSize: 10, letterSpacing: "0.22em", textTransform: "uppercase", color: G.accent, marginBottom: 28 }}>
-              About
-            </p>
-            <h2 style={{
-              fontFamily: G.serif, fontSize: "clamp(36px, 5vw, 62px)",
-              fontWeight: 300, lineHeight: 1.15, marginBottom: 44, color: G.cream,
-            }}>
-              Light is the medium.<br /><em>Patience is the craft.</em>
-            </h2>
-            <div style={{ color: "rgba(240,235,224,0.7)", lineHeight: 1.9, fontSize: 15, maxWidth: 580, display: "flex", flexDirection: "column", gap: 20 }}>
-              <p>Based between New York and London, I work across landscape, portrait, and documentary photography — drawn to the moments just before and just after the obvious shot.</p>
-              <p>My work has appeared in editorial publications and private collections across Europe and North America. I take on a small number of commissions each year to give each project the full attention it deserves.</p>
-              <p>Available for editorial assignments, fine art prints, and select commercial projects.</p>
-            </div>
-            <div style={{ marginTop: 64 }}>
-              <p style={{ fontSize: 10, letterSpacing: "0.22em", textTransform: "uppercase", color: G.accent, marginBottom: 24 }}>
-                Contact
-              </p>
-              {[
-                ["Email",     "hello@alexmercer.photo"],
-                ["Instagram", "@alexmercerphoto"],
-                ["Location",  "New York / London"],
-                ["For hire",  "Editorial · Fine Art · Commercial"],
-              ].map(([label, val]) => (
-                <div key={label} className="contact-row">
-                  <span style={{ fontSize: 10, letterSpacing: "0.14em", textTransform: "uppercase", color: G.muted, minWidth: 96 }}>
-                    {label}
-                  </span>
-                  <span style={{ fontSize: 15, color: G.cream }}>{val}</span>
-                </div>
-              ))}
-            </div>
+            )}
           </div>
-        )}
+        </header>
 
-        {/* Lightbox */}
+        {/* ── Grid ── */}
+        <div className="pad" style={{ padding:"12px 12px 64px" }}>
+          <div className="grid">
+            {PHOTOS.map(photo => {
+              const tall = photo.w < photo.h;
+              return (
+                <div
+                  key={photo.id}
+                  className="card"
+                  style={{ gridRow: tall ? "span 2" : "span 1", aspectRatio: tall ? "2/3" : "3/2" }}
+                  onClick={() => setLightbox(photo)}
+                >
+                  {!loaded[photo.id] && (
+                    <div style={{ position:"absolute", inset:0, background:G.off, borderRadius:10 }} />
+                  )}
+                  <img
+                    src={imgUrl(photo.seed, photo.w, photo.h)}
+                    alt={photo.title}
+                    loading="lazy"
+                    onLoad={() => setLoaded(l => ({ ...l, [photo.id]: true }))}
+                    style={{ opacity: loaded[photo.id] ? 1 : 0, transition:"opacity 0.35s" }}
+                  />
+                  <div className="card-cap">
+                    <span style={{ fontFamily:G.sans, fontSize:14, fontWeight:500, color:"#fff" }}>
+                      {photo.title}
+                    </span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* ── Lightbox ── */}
         {lightbox && (
           <div
-            role="dialog"
-            aria-modal="true"
-            aria-label={lightbox.title}
+            role="dialog" aria-modal="true"
             style={{
-              position: "fixed", inset: 0, zIndex: 200,
-              background: "rgba(4,4,3,0.97)",
-              display: "flex", alignItems: "center", justifyContent: "center",
+              position:"fixed", inset:0, zIndex:200,
+              background:"rgba(8,8,8,0.96)",
+              display:"flex", alignItems:"center", justifyContent:"center",
             }}
             onClick={() => setLightbox(null)}
           >
-            <button
-              aria-label="Close lightbox"
-              onClick={() => setLightbox(null)}
-              style={{
-                position: "absolute", top: 20, right: 24,
-                background: "none", border: "none", color: G.muted,
-                cursor: "pointer", fontSize: 12, letterSpacing: "0.12em",
-                fontFamily: G.sans, textTransform: "uppercase",
-              }}
-            >
-              esc ✕
-            </button>
-            <div style={{
-              position: "absolute", top: 24, left: "50%", transform: "translateX(-50%)",
-              fontSize: 11, letterSpacing: "0.15em", color: G.muted, fontFamily: G.sans,
+            <button onClick={() => setLightbox(null)} style={{
+              position:"absolute", top:18, right:22,
+              background:"none", border:"none", color:"rgba(255,255,255,0.4)",
+              cursor:"pointer", fontSize:12, letterSpacing:"0.1em",
+              textTransform:"uppercase", fontFamily:G.body,
+            }}>esc ✕</button>
+
+            <span style={{
+              position:"absolute", top:22, left:"50%", transform:"translateX(-50%)",
+              fontSize:12, color:"rgba(255,255,255,0.3)", fontFamily:G.body,
             }}>
-              {lbIdx + 1} / {filtered.length}
-            </div>
-            <button className="lb-arrow" style={{ left: 24 }} onClick={e => { e.stopPropagation(); navigate(-1); }}>‹</button>
-            <div onClick={e => e.stopPropagation()} style={{ maxWidth: "80vw", maxHeight: "85vh" }}>
+              {PHOTOS.findIndex(p => p.id === lightbox.id) + 1} / {PHOTOS.length}
+            </span>
+
+            <button className="lb-arrow" style={{ left:18 }}
+              onClick={e => { e.stopPropagation(); navigate(-1); }}>‹</button>
+
+            <div onClick={e => e.stopPropagation()} style={{ maxWidth:"84vw", maxHeight:"88vh" }}>
               <img
                 key={lightbox.seed}
                 src={imgUrl(lightbox.seed, lightbox.w * 2, lightbox.h * 2)}
                 alt={lightbox.title}
-                style={{ maxWidth: "80vw", maxHeight: "78vh", objectFit: "contain", display: "block" }}
+                style={{
+                  maxWidth:"84vw", maxHeight:"84vh",
+                  objectFit:"contain", display:"block", borderRadius:10,
+                }}
               />
-              <div style={{ marginTop: 16, display: "flex", alignItems: "center", gap: 14 }}>
-                <span style={{ fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: G.accent }}>{lightbox.cat}</span>
-                <span style={{ fontFamily: G.serif, fontSize: 21, fontStyle: "italic", color: G.cream }}>{lightbox.title}</span>
-                <span style={{ fontSize: 12, color: G.muted }}>{lightbox.loc}</span>
+              <div style={{ marginTop:12, textAlign:"center" }}>
+                <span style={{ fontSize:15, fontFamily:G.sans, fontWeight:500, color:"rgba(255,255,255,0.8)" }}>
+                  {lightbox.title}
+                </span>
               </div>
             </div>
-            <button className="lb-arrow" style={{ right: 24 }} onClick={e => { e.stopPropagation(); navigate(1); }}>›</button>
+
+            <button className="lb-arrow" style={{ right:18 }}
+              onClick={e => { e.stopPropagation(); navigate(1); }}>›</button>
           </div>
         )}
       </div>
