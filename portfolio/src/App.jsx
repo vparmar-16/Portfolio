@@ -22,7 +22,7 @@ const G = {
 // ─────────────────────────────────────────────
 const PHOTOS = [
   { id:1,  src:"/photos/DSC07594.jpg", cat:"Events",    title:"LilyPichu",      portrait:false, highlight:true  },
-  { id:2,  src:"/photos/photo-02.jpg", cat:"Concerts",  title:"Main Stage",      portrait:false, highlight:false },
+  { id:2,  src:"/photos/DSC08157.jpg", cat:"Events",  title:"LilyPichu",      portrait:false, highlight:false },
   { id:3,  src:"/photos/photo-03.jpg", cat:"Portraits", title:"Sam",             portrait:true,  highlight:true  },
   { id:4,  src:"/photos/photo-04.jpg", cat:"Events",    title:"Frosh Week",      portrait:false, highlight:false },
   { id:5,  src:"/photos/photo-05.jpg", cat:"Concerts",  title:"Sold Out",        portrait:false, highlight:true  },
