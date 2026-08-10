@@ -21,7 +21,7 @@ const G = {
 //     "Events" | "Concerts" | "Portraits" | "General"
 // ─────────────────────────────────────────────
 const PHOTOS = [
-  { id:1,  src:"/photos/photo-01.jpg", cat:"Events",    title:"Grad Night",      portrait:false, highlight:true  },
+  { id:1,  src:"/photos/DSC07594.jpg", cat:"Events",    title:"LilyPichu",      portrait:false, highlight:true  },
   { id:2,  src:"/photos/photo-02.jpg", cat:"Concerts",  title:"Main Stage",      portrait:false, highlight:false },
   { id:3,  src:"/photos/photo-03.jpg", cat:"Portraits", title:"Sam",             portrait:true,  highlight:true  },
   { id:4,  src:"/photos/photo-04.jpg", cat:"Events",    title:"Frosh Week",      portrait:false, highlight:false },
