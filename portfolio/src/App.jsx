@@ -18,31 +18,30 @@ const G = {
 //  3. Set portrait: true for tall/vertical photos
 //  4. Set highlight: true to show it on the front page
 //  5. Set cat to whichever album it belongs to:
-//     "Events" | "Concerts" | "Portraits" | "General"
 // ─────────────────────────────────────────────
 const PHOTOS = [
   { id:1,  src:"/photos/DSC07594.jpg", cat:"Events",   title:"LilyPichu @ TGEX",  portrait:false, highlight:true  },
-  { id:2,  src:"/photos/DSC08157.jpg", cat:"Events",   title:"VA Panel @ TGEX",   portrait:false, highlight:false },
-  { id:3,  src:"/photos/DSC08421.jpg", cat:"Events",   title:"",                  portrait:false, highlight:false },
-  { id:4,  src:"/photos/DSC09313.jpg", cat:"Events",   title:"",                  portrait:false, highlight:false },
-  { id:5,  src:"/photos/DSC09334.jpg", cat:"Events",   title:"",                  portrait:false, highlight:false },
-  { id:6,  src:"/photos/DSC09421.jpg", cat:"Events",   title:"",                  portrait:false, highlight:false },
-  { id:7,  src:"/photos/DSC09484.jpg", cat:"Events",   title:"",                  portrait:false, highlight:false },
-  { id:8,  src:"/photos/DSC09518.jpg", cat:"Events",   title:"",                  portrait:false, highlight:false },
-  { id:9,  src:"/photos/DSC03967.jpg", cat:"Concerts", title:"",                  portrait:false, highlight:false },
-  { id:10, src:"/photos/DSC03989.jpg", cat:"Concerts", title:"",                  portrait:false, highlight:false },
-  { id:11, src:"/photos/DSC04033.jpg", cat:"Concerts", title:"",                  portrait:false, highlight:false },
-  { id:12, src:"/photos/DSC04034.jpg", cat:"Concerts", title:"",                  portrait:false, highlight:false },
-  { id:13, src:"/photos/DSC04039.jpg", cat:"Concerts", title:"",                  portrait:false, highlight:false },
-  { id:14, src:"/photos/DSC04044.jpg", cat:"Concerts", title:"",                  portrait:false, highlight:false },
-  { id:15, src:"/photos/DSC06993.jpg", cat:"Portraits", title:"",                 portrait:true,  highlight:false },
-  { id:16, src:"/photos/DSC07005.jpg", cat:"Portraits", title:"",                 portrait:true,  highlight:false },
-  { id:17, src:"/photos/DSC07047.jpg", cat:"Portraits", title:"",                 portrait:true,  highlight:false },
-  { id:18, src:"/photos/DSC07054.jpg", cat:"Portraits", title:"",                 portrait:true,  highlight:false },
-  { id:19, src:"/photos/DSC07092.jpg", cat:"Portraits", title:"",                 portrait:true,  highlight:false },
-  { id:20, src:"/photos/DSC07095.jpg", cat:"Portraits", title:"",                 portrait:true,  highlight:false },
-  { id:21, src:"/photos/IMG_1260.jpg", cat:"General",  title:"",                  portrait:false, highlight:false },
-  { id:22, src:"/photos/IMG_1395.jpg", cat:"General",  title:"",                  portrait:false, highlight:false },
+  { id:2,  src:"/photos/DSC08157.jpg", cat:"Events",   title:"VA Panel @ TGEX",   portrait:false, highlight:true },
+  { id:3,  src:"/photos/DSC08421.jpg", cat:"Events",   title:"",                  portrait:false, highlight:true },
+  { id:4,  src:"/photos/DSC09313.jpg", cat:"Events",   title:"",                  portrait:false, highlight:true },
+  { id:5,  src:"/photos/DSC09334.jpg", cat:"Events",   title:"",                  portrait:false, highlight:true },
+  { id:6,  src:"/photos/DSC09421.jpg", cat:"Events",   title:"",                  portrait:false, highlight:true },
+  { id:7,  src:"/photos/DSC09484.jpg", cat:"Events",   title:"",                  portrait:false, highlight:true },
+  { id:8,  src:"/photos/DSC09518.jpg", cat:"Events",   title:"",                  portrait:false, highlight:true },
+  { id:9,  src:"/photos/DSC03967.jpg", cat:"Concerts", title:"",                  portrait:false, highlight:true },
+  { id:10, src:"/photos/DSC03989.jpg", cat:"Concerts", title:"",                  portrait:false, highlight:true },
+  { id:11, src:"/photos/DSC04033.jpg", cat:"Concerts", title:"",                  portrait:false, highlight:true },
+  { id:12, src:"/photos/DSC04034.jpg", cat:"Concerts", title:"",                  portrait:false, highlight:true },
+  { id:13, src:"/photos/DSC04039.jpg", cat:"Concerts", title:"",                  portrait:false, highlight:true },
+  { id:14, src:"/photos/DSC04044.jpg", cat:"Concerts", title:"",                  portrait:false, highlight:true },
+  { id:15, src:"/photos/DSC06993.jpg", cat:"Portraits", title:"",                 portrait:true,  highlight:true },
+  { id:16, src:"/photos/DSC07005.jpg", cat:"Portraits", title:"",                 portrait:true,  highlight:true },
+  { id:17, src:"/photos/DSC07047.jpg", cat:"Portraits", title:"",                 portrait:true,  highlight:true },
+  { id:18, src:"/photos/DSC07054.jpg", cat:"Portraits", title:"",                 portrait:true,  highlight:true },
+  { id:19, src:"/photos/DSC07092.jpg", cat:"Portraits", title:"",                 portrait:true,  highlight:true },
+  { id:20, src:"/photos/DSC07095.jpg", cat:"Portraits", title:"",                 portrait:true,  highlight:true },
+  { id:21, src:"/photos/IMG_1260.jpg", cat:"Assorted",  title:"",                  portrait:false, highlight:true },
+  { id:22, src:"/photos/IMG_1395.jpg", cat:"Assorted",  title:"",                  portrait:false, highlight:true },
 ];
 
 // ─────────────────────────────────────────────
@@ -51,7 +50,7 @@ const PHOTOS = [
 //  The name in DEFAULT_NAMES is the starting label
 //  (you can rename them live on the site too).
 // ─────────────────────────────────────────────
-const ALBUM_KEYS   = ["Events", "Concerts", "Portraits", "General"];
+const ALBUM_KEYS   = ["Events", "Singles", "Concert", "Assorted"];
 const DEFAULT_NAMES = { Events:"Events", Concerts:"Concerts", Portraits:"Portraits", General:"General" };
 
 // ─────────────────────────────────────────────
