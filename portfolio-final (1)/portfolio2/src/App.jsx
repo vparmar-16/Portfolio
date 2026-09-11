@@ -14,7 +14,7 @@ const G = {
 // ─────────────────────────────────────────────────────────────────
 //  ALBUMS  (style-based, not event-based)
 // ─────────────────────────────────────────────────────────────────
-const ALBUM_KEYS    = ["Portraits", "Concerts", "Events", ];
+const ALBUM_KEYS    = ["Portraits", "Concerts", "Events", "Assorted" ];
 const DEFAULT_NAMES = { Portraits:"Portraits", Concerts:"Concerts", Events:"Events", Assorted: "Assorted"};
 
 // ─────────────────────────────────────────────────────────────────
