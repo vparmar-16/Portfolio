@@ -15,7 +15,7 @@ const G = {
 //  ALBUMS  (style-based, not event-based)
 // ─────────────────────────────────────────────────────────────────
 const ALBUM_KEYS    = ["Portraits", "Concerts", "Events", ];
-const DEFAULT_NAMES = { Portraits:"Portraits", Concerts:"Concerts", Events:"Events",};
+const DEFAULT_NAMES = { Portraits:"Portraits", Concerts:"Concerts", Events:"Events", Assorted: "Assorted"};
 
 // ─────────────────────────────────────────────────────────────────
 //  PHOTOS
@@ -35,8 +35,8 @@ const PHOTOS = [
   { id:9,  src:"/photos/DSC00976.jpg", cat:"Portraits", subcat:"Graduation Shoot", title:"", portrait:true,  highlight:false },
 
   // ── PORTRAITS: ungrouped ─────────────────────────────────────
-  { id:10, src:"/photos/DSC01741.jpg", cat:"Portraits", subcat:"", title:"", portrait:false,  highlight:true  },
-  { id:11, src:"/photos/DSC01894.jpg", cat:"Portraits", subcat:"", title:"", portrait:false,  highlight:true  },
+  { id:10, src:"/photos/DSC01741.jpg", cat:"Assorted", subcat:"", title:"", portrait:true,  highlight:true  },
+  { id:11, src:"/photos/DSC01894.jpg", cat:"Assorted", subcat:"", title:"", portrait:true,  highlight:true  },
 
   // ── CONCERTS: Ascend ─────────────────────────────────────────
   { id:12, src:"/photos/DSC04664.jpg", cat:"Concerts", subcat:"Ascend", title:"", portrait:true,  highlight:false },
@@ -62,8 +62,8 @@ const PHOTOS = [
   { id:30, src:"/photos/IMG_2620.jpg", cat:"Concerts", subcat:"MarQ", title:"", portrait:false, highlight:false },
 
   // ── CONCERTS: Bytes and Beats ────────────────────────────────
-  { id:31, src:"/photos/IMG_1260.jpg", cat:"Concerts", subcat:"Bytes and Beats", title:"", portrait:true,  highlight:false },
-  { id:32, src:"/photos/IMG_1395.jpg", cat:"Concerts", subcat:"Bytes and Beats", title:"", portrait:true,  highlight:false },
+  { id:31, src:"/photos/IMG_1260.jpg", cat:"Assorted", subcat:"", title:"", portrait:true,  highlight:false },
+  { id:32, src:"/photos/IMG_1395.jpg", cat:"Assorted", subcat:"", title:"", portrait:true,  highlight:false },
 
   // ── EVENTS: TGEX 2025 (Lily) ─────────────────────────────────
   { id:33, src:"/photos/DSC07594.jpg", cat:"Events", subcat:"TGEX 2025", title:"LilyPichu", portrait:true,  highlight:true  },
