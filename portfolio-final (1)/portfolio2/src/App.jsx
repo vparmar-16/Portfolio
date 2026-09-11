@@ -35,8 +35,8 @@ const PHOTOS = [
   { id:9,  src:"/photos/DSC00976.jpg", cat:"Portraits", subcat:"Graduation Shoot", title:"", portrait:true,  highlight:false },
 
   // ── PORTRAITS: ungrouped ─────────────────────────────────────
-  { id:10, src:"/photos/DSC01741.jpg", cat:"Portraits", subcat:"", title:"", portrait:true,  highlight:true  },
-  { id:11, src:"/photos/DSC01894.jpg", cat:"Portraits", subcat:"", title:"", portrait:true,  highlight:true  },
+  { id:10, src:"/photos/DSC01741.jpg", cat:"Portraits", subcat:"", title:"", portrait:false,  highlight:true  },
+  { id:11, src:"/photos/DSC01894.jpg", cat:"Portraits", subcat:"", title:"", portrait:false,  highlight:true  },
 
   // ── CONCERTS: Ascend ─────────────────────────────────────────
   { id:12, src:"/photos/DSC04664.jpg", cat:"Concerts", subcat:"Ascend", title:"", portrait:true,  highlight:false },
