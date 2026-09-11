@@ -52,23 +52,23 @@ const PHOTOS = [
   { id:22, src:"/photos/DSC06899.jpg", cat:"Concerts", subcat:"Ascend", title:"", portrait:true,  highlight:true },
   { id:23, src:"/photos/DSC06914.jpg", cat:"Concerts", subcat:"Ascend", title:"", portrait:true,  highlight:false },
 
-  // ── CONCERTS: MarQ ───────────────────────────────────────────
-  { id:24, src:"/photos/IMG_2254.jpg", cat:"Concerts", subcat:"MarQ", title:"", portrait:true,  highlight:false },
-  { id:25, src:"/photos/IMG_2283.jpg", cat:"Concerts", subcat:"MarQ", title:"", portrait:true,  highlight:false },
-  { id:26, src:"/photos/IMG_2286.jpg", cat:"Concerts", subcat:"MarQ", title:"", portrait:true,  highlight:true  },
-  { id:27, src:"/photos/IMG_2338.jpg", cat:"Concerts", subcat:"MarQ", title:"", portrait:false, highlight:false },
-  { id:28, src:"/photos/IMG_2429.jpg", cat:"Concerts", subcat:"MarQ", title:"", portrait:false, highlight:true  },
-  { id:29, src:"/photos/IMG_2558.jpg", cat:"Concerts", subcat:"MarQ", title:"", portrait:false, highlight:false },
-  { id:30, src:"/photos/IMG_2620.jpg", cat:"Concerts", subcat:"MarQ", title:"", portrait:false, highlight:false },
+  // ── CONCERTS: marQ ───────────────────────────────────────────
+  { id:24, src:"/photos/IMG_2254.jpg", cat:"Concerts", subcat:"marQ", title:"", portrait:true,  highlight:false },
+  { id:25, src:"/photos/IMG_2283.jpg", cat:"Concerts", subcat:"marQ", title:"", portrait:true,  highlight:false },
+  { id:26, src:"/photos/IMG_2286.jpg", cat:"Concerts", subcat:"marQ", title:"", portrait:true,  highlight:true  },
+  { id:27, src:"/photos/IMG_2338.jpg", cat:"Concerts", subcat:"marQ", title:"", portrait:false, highlight:false },
+  { id:28, src:"/photos/IMG_2429.jpg", cat:"Concerts", subcat:"marQ", title:"", portrait:false, highlight:true  },
+  { id:29, src:"/photos/IMG_2558.jpg", cat:"Concerts", subcat:"marQ", title:"", portrait:false, highlight:false },
+  { id:30, src:"/photos/IMG_2620.jpg", cat:"Concerts", subcat:"marQ", title:"", portrait:false, highlight:false },
 
   // ── CONCERTS: Bytes and Beats ────────────────────────────────
   { id:31, src:"/photos/IMG_1260.jpg", cat:"Assorted", subcat:"", title:"", portrait:true,  highlight:false },
   { id:32, src:"/photos/IMG_1395.jpg", cat:"Assorted", subcat:"", title:"", portrait:true,  highlight:false },
 
-  // ── EVENTS: TGEX 2025 (Lily) ─────────────────────────────────
-  { id:33, src:"/photos/DSC07594.jpg", cat:"Events", subcat:"TGEX 2025", title:"LilyPichu", portrait:true,  highlight:true  },
-  { id:34, src:"/photos/DSC08157.jpg", cat:"Events", subcat:"TGEX 2025", title:"VA Panel",  portrait:false, highlight:true  },
-  { id:35, src:"/photos/DSC08421.jpg", cat:"Events", subcat:"TGEX 2025", title:"",          portrait:true,  highlight:false },
+  // ── EVENTS: TGEX 2026 (Lily) ─────────────────────────────────
+  { id:33, src:"/photos/DSC07594.jpg", cat:"Events", subcat:"TGEX 2026", title:"", portrait:true,  highlight:true  },
+  { id:34, src:"/photos/DSC08157.jpg", cat:"Events", subcat:"TGEX 2026", title:"",  portrait:false, highlight:true  },
+  { id:35, src:"/photos/DSC08421.jpg", cat:"Events", subcat:"TGEX 2026", title:"",          portrait:true,  highlight:false },
 
   // ── EVENTS: TGEX 2026 (Tuonoto panel) ────────────────────────
   { id:36, src:"/photos/DSC03989.jpg", cat:"Events", subcat:"TGEX 2026", title:"", portrait:false, highlight:false },
