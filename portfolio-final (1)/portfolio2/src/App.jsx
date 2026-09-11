@@ -25,7 +25,7 @@ const PHOTOS = [
 
   // ── PORTRAITS:  ────────────────────────────────────────
   { id:1,  src:"/photos/DSC06993.jpg", cat:"Portraits",  subcat:"Cosplay", title:"", portrait:true,  highlight:true  },
-  { id:2,  src:"/photos/DSC07054.jpg", cat:"Portraits",  subcat:"Cosplay", title:"", portrait:true,  highlight:true  },
+  { id:2,  src:"/photos/DSC07054.jpg", cat:"Portraits",  subcat:"Cosplay", title:"", portrait:true,  highlight:false  },
   { id:3,  src:"/photos/DSC07095.jpg", cat:"Portraits",  subcat:"Cosplay", title:"", portrait:true,  highlight:true  },
   { id:4,  src:"/photos/DSC00186.jpg", cat:"Portraits", subcat:"Graduation Shoot", title:"", portrait:true,  highlight:false  },
   { id:9,  src:"/photos/DSC00976.jpg", cat:"Portraits", subcat:"Graduation Shoot", title:"", portrait:true,  highlight:true },
@@ -43,7 +43,7 @@ const PHOTOS = [
   { id:13, src:"/photos/DSC06160.jpg", cat:"Concerts", subcat:"Ascend", title:"", portrait:true,  highlight:false },
   { id:14, src:"/photos/DSC06290.jpg", cat:"Concerts", subcat:"Ascend", title:"", portrait:true,  highlight:false },
   { id:15, src:"/photos/DSC06628.jpg", cat:"Concerts", subcat:"Ascend", title:"", portrait:true,  highlight:true  },
-  { id:16, src:"/photos/DSC06675.jpg", cat:"Concerts", subcat:"Ascend", title:"", portrait:false, highlight:false },
+  { id:16, src:"/photos/DSC06675.jpg", cat:"Concerts", subcat:"Ascend", title:"", portrait:false, highlight:true },
   { id:17, src:"/photos/DSC06678.jpg", cat:"Concerts", subcat:"Ascend", title:"", portrait:false, highlight:false },
   { id:18, src:"/photos/DSC06884.jpg", cat:"Concerts", subcat:"Ascend", title:"", portrait:true,  highlight:true  },
   { id:19, src:"/photos/DSC06886.jpg", cat:"Concerts", subcat:"Ascend", title:"", portrait:true,  highlight:false },
