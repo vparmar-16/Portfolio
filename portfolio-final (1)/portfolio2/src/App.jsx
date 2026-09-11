@@ -27,12 +27,12 @@ const PHOTOS = [
   { id:1,  src:"/photos/DSC06993.jpg", cat:"Portraits",  subcat:"Cosplay", title:"", portrait:true,  highlight:true  },
   { id:2,  src:"/photos/DSC07054.jpg", cat:"Portraits",  subcat:"Cosplay", title:"", portrait:true,  highlight:true  },
   { id:3,  src:"/photos/DSC07095.jpg", cat:"Portraits",  subcat:"Cosplay", title:"", portrait:true,  highlight:true  },
-  { id:4,  src:"/photos/DSC00186.jpg", cat:"Portraits", subcat:"Graduation Shoot", title:"", portrait:true,  highlight:true  },
+  { id:4,  src:"/photos/DSC00186.jpg", cat:"Portraits", subcat:"Graduation Shoot", title:"", portrait:true,  highlight:false  },
+  { id:9,  src:"/photos/DSC00976.jpg", cat:"Portraits", subcat:"Graduation Shoot", title:"", portrait:true,  highlight:true },
   { id:5,  src:"/photos/DSC00686.jpg", cat:"Portraits", subcat:"Graduation Shoot", title:"", portrait:true,  highlight:false },
-  { id:6,  src:"/photos/DSC00758.jpg", cat:"Portraits", subcat:"Graduation Shoot", title:"", portrait:true,  highlight:false },
-  { id:7,  src:"/photos/DSC00775.jpg", cat:"Portraits", subcat:"Graduation Shoot", title:"", portrait:true,  highlight:true },
-  { id:8,  src:"/photos/DSC00949.jpg", cat:"Portraits", subcat:"Graduation Shoot", title:"", portrait:true,  highlight:false },
-  { id:9,  src:"/photos/DSC00976.jpg", cat:"Portraits", subcat:"Graduation Shoot", title:"", portrait:true,  highlight:false },
+  { id:6,  src:"/photos/DSC00758.jpg", cat:"Portraits", subcat:"Graduation Shoot", title:"", portrait:true,  highlight:true },
+  { id:7,  src:"/photos/DSC00775.jpg", cat:"Portraits", subcat:"Graduation Shoot", title:"", portrait:true,  highlight:false },
+  { id:8,  src:"/photos/DSC00949.jpg", cat:"Portraits", subcat:"Graduation Shoot", title:"", portrait:true,  highlight:true },
 
   // ── PORTRAITS: ungrouped ─────────────────────────────────────
   { id:10, src:"/photos/DSC01741.jpg", cat:"Assorted", subcat:"", title:"", portrait:true,  highlight:false  },
