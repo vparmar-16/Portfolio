@@ -14,8 +14,8 @@ const G = {
 // ─────────────────────────────────────────────────────────────────
 //  ALBUMS  (style-based, not event-based)
 // ─────────────────────────────────────────────────────────────────
-const ALBUM_KEYS    = ["Portraits", "Concerts", "Events", "Cosplay"];
-const DEFAULT_NAMES = { Portraits:"Portraits", Concerts:"Concerts", Events:"Events", Cosplay:"Cosplay" };
+const ALBUM_KEYS    = ["Portraits", "Concerts", "Events", ];
+const DEFAULT_NAMES = { Portraits:"Portraits", Concerts:"Concerts", Events:"Events",};
 
 // ─────────────────────────────────────────────────────────────────
 //  PHOTOS
@@ -23,12 +23,10 @@ const DEFAULT_NAMES = { Portraits:"Portraits", Concerts:"Concerts", Events:"Even
 // ─────────────────────────────────────────────────────────────────
 const PHOTOS = [
 
-  // ── COSPLAY ─────────────────────────────────────────────────
+  // ── PORTRAITS: Graduation Shoot ────────────────────────────────────────
   { id:1,  src:"/photos/DSC06993.jpg", cat:"Cosplay",  subcat:"", title:"", portrait:true,  highlight:true  },
   { id:2,  src:"/photos/DSC07054.jpg", cat:"Cosplay",  subcat:"", title:"", portrait:true,  highlight:true  },
   { id:3,  src:"/photos/DSC07095.jpg", cat:"Cosplay",  subcat:"", title:"", portrait:true,  highlight:true  },
-
-  // ── PORTRAITS: Serena ────────────────────────────────────────
   { id:4,  src:"/photos/DSC00186.jpg", cat:"Portraits", subcat:"Serena", title:"", portrait:true,  highlight:true  },
   { id:5,  src:"/photos/DSC00686.jpg", cat:"Portraits", subcat:"Serena", title:"", portrait:true,  highlight:false },
   { id:6,  src:"/photos/DSC00758.jpg", cat:"Portraits", subcat:"Serena", title:"", portrait:true,  highlight:false },
