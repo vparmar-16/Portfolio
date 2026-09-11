@@ -30,13 +30,13 @@ const PHOTOS = [
   { id:4,  src:"/photos/DSC00186.jpg", cat:"Portraits", subcat:"Graduation Shoot", title:"", portrait:true,  highlight:true  },
   { id:5,  src:"/photos/DSC00686.jpg", cat:"Portraits", subcat:"Graduation Shoot", title:"", portrait:true,  highlight:false },
   { id:6,  src:"/photos/DSC00758.jpg", cat:"Portraits", subcat:"Graduation Shoot", title:"", portrait:true,  highlight:false },
-  { id:7,  src:"/photos/DSC00775.jpg", cat:"Portraits", subcat:"Graduation Shoot", title:"", portrait:true,  highlight:false },
+  { id:7,  src:"/photos/DSC00775.jpg", cat:"Portraits", subcat:"Graduation Shoot", title:"", portrait:true,  highlight:true },
   { id:8,  src:"/photos/DSC00949.jpg", cat:"Portraits", subcat:"Graduation Shoot", title:"", portrait:true,  highlight:false },
   { id:9,  src:"/photos/DSC00976.jpg", cat:"Portraits", subcat:"Graduation Shoot", title:"", portrait:true,  highlight:false },
 
   // ── PORTRAITS: ungrouped ─────────────────────────────────────
-  { id:10, src:"/photos/DSC01741.jpg", cat:"Assorted", subcat:"", title:"", portrait:true,  highlight:true  },
-  { id:11, src:"/photos/DSC01894.jpg", cat:"Assorted", subcat:"", title:"", portrait:true,  highlight:true  },
+  { id:10, src:"/photos/DSC01741.jpg", cat:"Assorted", subcat:"", title:"", portrait:true,  highlight:false  },
+  { id:11, src:"/photos/DSC01894.jpg", cat:"Assorted", subcat:"", title:"", portrait:true,  highlight:false  },
 
   // ── CONCERTS: Ascend ─────────────────────────────────────────
   { id:12, src:"/photos/DSC04664.jpg", cat:"Concerts", subcat:"Ascend", title:"", portrait:true,  highlight:false },
@@ -49,7 +49,7 @@ const PHOTOS = [
   { id:19, src:"/photos/DSC06886.jpg", cat:"Concerts", subcat:"Ascend", title:"", portrait:true,  highlight:false },
   { id:20, src:"/photos/DSC06894.jpg", cat:"Concerts", subcat:"Ascend", title:"", portrait:true,  highlight:false },
   { id:21, src:"/photos/DSC06898.jpg", cat:"Concerts", subcat:"Ascend", title:"", portrait:true,  highlight:false },
-  { id:22, src:"/photos/DSC06899.jpg", cat:"Concerts", subcat:"Ascend", title:"", portrait:true,  highlight:false },
+  { id:22, src:"/photos/DSC06899.jpg", cat:"Concerts", subcat:"Ascend", title:"", portrait:true,  highlight:true },
   { id:23, src:"/photos/DSC06914.jpg", cat:"Concerts", subcat:"Ascend", title:"", portrait:true,  highlight:false },
 
   // ── CONCERTS: MarQ ───────────────────────────────────────────
@@ -72,7 +72,7 @@ const PHOTOS = [
 
   // ── EVENTS: TGEX 2026 (Tuonoto panel) ────────────────────────
   { id:36, src:"/photos/DSC03989.jpg", cat:"Events", subcat:"TGEX 2026", title:"", portrait:false, highlight:false },
-  { id:37, src:"/photos/DSC04034.jpg", cat:"Events", subcat:"TGEX 2026", title:"", portrait:false, highlight:false },
+  { id:37, src:"/photos/DSC04034.jpg", cat:"Events", subcat:"TGEX 2026", title:"", portrait:false, highlight:true },
   { id:38, src:"/photos/DSC04039.jpg", cat:"Events", subcat:"TGEX 2026", title:"", portrait:false, highlight:true  },
   { id:39, src:"/photos/DSC04044.jpg", cat:"Events", subcat:"TGEX 2026", title:"", portrait:true,  highlight:false },
 
