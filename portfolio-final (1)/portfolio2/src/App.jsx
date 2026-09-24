@@ -32,7 +32,7 @@ const PHOTOS = [
   // ── ASSORTED ─────────────────────────────────────────────────
   { id:10, src:"/photos/DSC01741.jpg", cat:"Portraits",  subcat:"",                  title:"", portrait:true,  highlight:false },
   { id:11, src:"/photos/DSC01894.jpg", cat:"Portraits",  subcat:"",                  title:"", portrait:true,  highlight:false },
-  { id:31, src:"/photos/IMG_1260.jpg", cat:"Concerts",  subcat:"",                  title:"", portrait:true,  highlight:false },
+  { id:31, src:"/photos/IMG_1260.jpg", cat:"Concerts",  subcat:"",                  title:"", portrait:true,  highlight:true },
   { id:32, src:"/photos/IMG_1395.jpg", cat:"Concerts",  subcat:"",                  title:"", portrait:true,  highlight:false },
 
   // ── CONCERTS: Ken Carson ─────────────────────────────────────
@@ -40,11 +40,11 @@ const PHOTOS = [
   { id:44, src:"/photos/IMG_2821.jpg", cat:"Concerts",  subcat:"Ken Carson",        title:"", portrait:false, highlight:false },
   { id:45, src:"/photos/IMG_2827.jpg", cat:"Concerts",  subcat:"Ken Carson",        title:"", portrait:false, highlight:true  },
   { id:46, src:"/photos/IMG_2883.jpg", cat:"Concerts",  subcat:"Ken Carson",        title:"", portrait:false, highlight:false },
-  { id:47, src:"/photos/IMG_2910.jpg", cat:"Concerts",  subcat:"Ken Carson",        title:"", portrait:false, highlight:false },
+  { id:47, src:"/photos/IMG_2910.jpg", cat:"Concerts",  subcat:"Ken Carson",        title:"", portrait:false, highlight:true },
   { id:48, src:"/photos/IMG_2915.jpg", cat:"Concerts",  subcat:"Ken Carson",        title:"", portrait:false, highlight:false },
   { id:49, src:"/photos/IMG_2965.jpg", cat:"Concerts",  subcat:"Ken Carson",        title:"", portrait:false, highlight:false },
   { id:50, src:"/photos/IMG_2967.jpg", cat:"Concerts",  subcat:"Ken Carson",        title:"", portrait:false, highlight:false },
-  { id:51, src:"/photos/IMG_2975.jpg", cat:"Concerts",  subcat:"Ken Carson",        title:"", portrait:false, highlight:false },
+  { id:51, src:"/photos/IMG_2975.jpg", cat:"Concerts",  subcat:"Ken Carson",        title:"", portrait:false, highlight:true },
   { id:52, src:"/photos/IMG_2978.jpg", cat:"Concerts",  subcat:"Ken Carson",        title:"", portrait:false, highlight:false },
 
   // ── CONCERTS: Ascend ─────────────────────────────────────────
