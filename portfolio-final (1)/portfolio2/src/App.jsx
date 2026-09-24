@@ -11,8 +11,8 @@ const G = {
   body:   "'DM Sans', system-ui, sans-serif",
 };
 
-const ALBUM_KEYS    = ["Concerts", "Events", "Portraits", "Assorted"];
-const DEFAULT_NAMES = { Concerts:"Concerts", Events:"Events", Portraits:"Portraits", Assorted:"Assorted" };
+const ALBUM_KEYS    = ["Concerts", "Events", "Portraits"];
+const DEFAULT_NAMES = { Concerts:"Concerts", Events:"Events", Portraits:"Portraits"};
 
 const PHOTOS = [
 
@@ -30,10 +30,10 @@ const PHOTOS = [
   { id:8,  src:"/photos/DSC00949.jpg", cat:"Portraits", subcat:"Graduation Shoot",  title:"", portrait:true,  highlight:true  },
 
   // ── ASSORTED ─────────────────────────────────────────────────
-  { id:10, src:"/photos/DSC01741.jpg", cat:"Assorted",  subcat:"",                  title:"", portrait:true,  highlight:false },
-  { id:11, src:"/photos/DSC01894.jpg", cat:"Assorted",  subcat:"",                  title:"", portrait:true,  highlight:false },
-  { id:31, src:"/photos/IMG_1260.jpg", cat:"Assorted",  subcat:"",                  title:"", portrait:true,  highlight:false },
-  { id:32, src:"/photos/IMG_1395.jpg", cat:"Assorted",  subcat:"",                  title:"", portrait:true,  highlight:false },
+  { id:10, src:"/photos/DSC01741.jpg", cat:"Portraits",  subcat:"",                  title:"", portrait:true,  highlight:false },
+  { id:11, src:"/photos/DSC01894.jpg", cat:"Portraits",  subcat:"",                  title:"", portrait:true,  highlight:false },
+  { id:31, src:"/photos/IMG_1260.jpg", cat:"Concerts",  subcat:"",                  title:"", portrait:true,  highlight:false },
+  { id:32, src:"/photos/IMG_1395.jpg", cat:"Concerts",  subcat:"",                  title:"", portrait:true,  highlight:false },
 
   // ── CONCERTS: Ken Carson ─────────────────────────────────────
   { id:43, src:"/photos/IMG_2770.jpg", cat:"Concerts",  subcat:"Ken Carson",        title:"", portrait:false, highlight:true  },
