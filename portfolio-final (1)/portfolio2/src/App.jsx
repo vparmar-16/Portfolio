@@ -11,79 +11,79 @@ const G = {
   body:   "'DM Sans', system-ui, sans-serif",
 };
 
-// ─────────────────────────────────────────────────────────────────
-//  ALBUMS  (style-based, not event-based)
-// ─────────────────────────────────────────────────────────────────
-const ALBUM_KEYS    = ["Portraits", "Concerts", "Events", "Assorted" ];
-const DEFAULT_NAMES = { Portraits:"Portraits", Concerts:"Concerts", Events:"Events", Assorted: "Assorted"};
+const ALBUM_KEYS    = ["Concerts", "Events", "Portraits", "Assorted"];
+const DEFAULT_NAMES = { Concerts:"Concerts", Events:"Events", Portraits:"Portraits", Assorted:"Assorted" };
 
-// ─────────────────────────────────────────────────────────────────
-//  PHOTOS
-//  highlight:true → shown on front page (exactly 14, curated variety)
-// ─────────────────────────────────────────────────────────────────
 const PHOTOS = [
 
-  // ── PORTRAITS:  ────────────────────────────────────────
-  { id:1,  src:"/photos/DSC06993.jpg", cat:"Portraits",  subcat:"Cosplay", title:"", portrait:true,  highlight:true  },
-  { id:2,  src:"/photos/DSC07054.jpg", cat:"Portraits",  subcat:"Cosplay", title:"", portrait:true,  highlight:false  },
-  { id:3,  src:"/photos/DSC07095.jpg", cat:"Portraits",  subcat:"Cosplay", title:"", portrait:true,  highlight:true  },
-  { id:4,  src:"/photos/DSC00186.jpg", cat:"Portraits", subcat:"Graduation Shoot", title:"", portrait:true,  highlight:false  },
-  { id:9,  src:"/photos/DSC00976.jpg", cat:"Portraits", subcat:"Graduation Shoot", title:"", portrait:true,  highlight:true },
-  { id:5,  src:"/photos/DSC00686.jpg", cat:"Portraits", subcat:"Graduation Shoot", title:"", portrait:true,  highlight:false },
-  { id:6,  src:"/photos/DSC00758.jpg", cat:"Portraits", subcat:"Graduation Shoot", title:"", portrait:true,  highlight:true },
-  { id:7,  src:"/photos/DSC00775.jpg", cat:"Portraits", subcat:"Graduation Shoot", title:"", portrait:true,  highlight:false },
-  { id:8,  src:"/photos/DSC00949.jpg", cat:"Portraits", subcat:"Graduation Shoot", title:"", portrait:true,  highlight:true },
+  // ── PORTRAITS: Cosplay ───────────────────────────────────────
+  { id:1,  src:"/photos/DSC06993.jpg", cat:"Portraits", subcat:"Cosplay",           title:"", portrait:true,  highlight:true  },
+  { id:2,  src:"/photos/DSC07054.jpg", cat:"Portraits", subcat:"Cosplay",           title:"", portrait:true,  highlight:false },
+  { id:3,  src:"/photos/DSC07095.jpg", cat:"Portraits", subcat:"Cosplay",           title:"", portrait:true,  highlight:true  },
 
-  // ── PORTRAITS: ungrouped ─────────────────────────────────────
-  { id:10, src:"/photos/DSC01741.jpg", cat:"Assorted", subcat:"", title:"", portrait:true,  highlight:false  },
-  { id:11, src:"/photos/DSC01894.jpg", cat:"Assorted", subcat:"", title:"", portrait:true,  highlight:false  },
+  // ── PORTRAITS: Graduation Shoot ──────────────────────────────
+  { id:4,  src:"/photos/DSC00186.jpg", cat:"Portraits", subcat:"Graduation Shoot",  title:"", portrait:true,  highlight:false },
+  { id:9,  src:"/photos/DSC00976.jpg", cat:"Portraits", subcat:"Graduation Shoot",  title:"", portrait:true,  highlight:true  },
+  { id:5,  src:"/photos/DSC00686.jpg", cat:"Portraits", subcat:"Graduation Shoot",  title:"", portrait:true,  highlight:false },
+  { id:6,  src:"/photos/DSC00758.jpg", cat:"Portraits", subcat:"Graduation Shoot",  title:"", portrait:true,  highlight:true  },
+  { id:7,  src:"/photos/DSC00775.jpg", cat:"Portraits", subcat:"Graduation Shoot",  title:"", portrait:true,  highlight:false },
+  { id:8,  src:"/photos/DSC00949.jpg", cat:"Portraits", subcat:"Graduation Shoot",  title:"", portrait:true,  highlight:true  },
+
+  // ── ASSORTED ─────────────────────────────────────────────────
+  { id:10, src:"/photos/DSC01741.jpg", cat:"Assorted",  subcat:"",                  title:"", portrait:true,  highlight:false },
+  { id:11, src:"/photos/DSC01894.jpg", cat:"Assorted",  subcat:"",                  title:"", portrait:true,  highlight:false },
+  { id:31, src:"/photos/IMG_1260.jpg", cat:"Assorted",  subcat:"",                  title:"", portrait:true,  highlight:false },
+  { id:32, src:"/photos/IMG_1395.jpg", cat:"Assorted",  subcat:"",                  title:"", portrait:true,  highlight:false },
+
+  // ── CONCERTS: Ken Carson ─────────────────────────────────────
+  { id:43, src:"/photos/IMG_2770.jpg", cat:"Concerts",  subcat:"Ken Carson",        title:"", portrait:false, highlight:true  },
+  { id:44, src:"/photos/IMG_2821.jpg", cat:"Concerts",  subcat:"Ken Carson",        title:"", portrait:false, highlight:false },
+  { id:45, src:"/photos/IMG_2827.jpg", cat:"Concerts",  subcat:"Ken Carson",        title:"", portrait:false, highlight:true  },
+  { id:46, src:"/photos/IMG_2883.jpg", cat:"Concerts",  subcat:"Ken Carson",        title:"", portrait:false, highlight:false },
+  { id:47, src:"/photos/IMG_2910.jpg", cat:"Concerts",  subcat:"Ken Carson",        title:"", portrait:false, highlight:false },
+  { id:48, src:"/photos/IMG_2915.jpg", cat:"Concerts",  subcat:"Ken Carson",        title:"", portrait:false, highlight:false },
+  { id:49, src:"/photos/IMG_2965.jpg", cat:"Concerts",  subcat:"Ken Carson",        title:"", portrait:false, highlight:false },
+  { id:50, src:"/photos/IMG_2967.jpg", cat:"Concerts",  subcat:"Ken Carson",        title:"", portrait:false, highlight:false },
+  { id:51, src:"/photos/IMG_2975.jpg", cat:"Concerts",  subcat:"Ken Carson",        title:"", portrait:false, highlight:false },
+  { id:52, src:"/photos/IMG_2978.jpg", cat:"Concerts",  subcat:"Ken Carson",        title:"", portrait:false, highlight:false },
 
   // ── CONCERTS: Ascend ─────────────────────────────────────────
-  { id:12, src:"/photos/DSC04664.jpg", cat:"Concerts", subcat:"Ascend", title:"", portrait:true,  highlight:false },
-  { id:13, src:"/photos/DSC06160.jpg", cat:"Concerts", subcat:"Ascend", title:"", portrait:true,  highlight:false },
-  { id:14, src:"/photos/DSC06290.jpg", cat:"Concerts", subcat:"Ascend", title:"", portrait:true,  highlight:false },
-  { id:15, src:"/photos/DSC06628.jpg", cat:"Concerts", subcat:"Ascend", title:"", portrait:true,  highlight:true  },
-  { id:16, src:"/photos/DSC06675.jpg", cat:"Concerts", subcat:"Ascend", title:"", portrait:false, highlight:true },
-  { id:17, src:"/photos/DSC06678.jpg", cat:"Concerts", subcat:"Ascend", title:"", portrait:false, highlight:false },
-  { id:18, src:"/photos/DSC06884.jpg", cat:"Concerts", subcat:"Ascend", title:"", portrait:true,  highlight:true  },
-  { id:19, src:"/photos/DSC06886.jpg", cat:"Concerts", subcat:"Ascend", title:"", portrait:true,  highlight:false },
-  { id:20, src:"/photos/DSC06894.jpg", cat:"Concerts", subcat:"Ascend", title:"", portrait:true,  highlight:false },
-  { id:21, src:"/photos/DSC06898.jpg", cat:"Concerts", subcat:"Ascend", title:"", portrait:true,  highlight:false },
-  { id:22, src:"/photos/DSC06899.jpg", cat:"Concerts", subcat:"Ascend", title:"", portrait:true,  highlight:true },
-  { id:23, src:"/photos/DSC06914.jpg", cat:"Concerts", subcat:"Ascend", title:"", portrait:true,  highlight:false },
+  { id:12, src:"/photos/DSC04664.jpg", cat:"Concerts",  subcat:"Ascend",            title:"", portrait:true,  highlight:false },
+  { id:13, src:"/photos/DSC06160.jpg", cat:"Concerts",  subcat:"Ascend",            title:"", portrait:true,  highlight:false },
+  { id:14, src:"/photos/DSC06290.jpg", cat:"Concerts",  subcat:"Ascend",            title:"", portrait:true,  highlight:false },
+  { id:15, src:"/photos/DSC06628.jpg", cat:"Concerts",  subcat:"Ascend",            title:"", portrait:true,  highlight:true  },
+  { id:16, src:"/photos/DSC06675.jpg", cat:"Concerts",  subcat:"Ascend",            title:"", portrait:false, highlight:true  },
+  { id:17, src:"/photos/DSC06678.jpg", cat:"Concerts",  subcat:"Ascend",            title:"", portrait:false, highlight:false },
+  { id:18, src:"/photos/DSC06884.jpg", cat:"Concerts",  subcat:"Ascend",            title:"", portrait:true,  highlight:true  },
+  { id:19, src:"/photos/DSC06886.jpg", cat:"Concerts",  subcat:"Ascend",            title:"", portrait:true,  highlight:false },
+  { id:20, src:"/photos/DSC06894.jpg", cat:"Concerts",  subcat:"Ascend",            title:"", portrait:true,  highlight:false },
+  { id:21, src:"/photos/DSC06898.jpg", cat:"Concerts",  subcat:"Ascend",            title:"", portrait:true,  highlight:false },
+  { id:22, src:"/photos/DSC06899.jpg", cat:"Concerts",  subcat:"Ascend",            title:"", portrait:true,  highlight:true  },
+  { id:23, src:"/photos/DSC06914.jpg", cat:"Concerts",  subcat:"Ascend",            title:"", portrait:true,  highlight:false },
 
   // ── CONCERTS: marQ ───────────────────────────────────────────
-  { id:24, src:"/photos/IMG_2254.jpg", cat:"Concerts", subcat:"marQ", title:"", portrait:true,  highlight:false },
-  { id:25, src:"/photos/IMG_2283.jpg", cat:"Concerts", subcat:"marQ", title:"", portrait:true,  highlight:false },
-  { id:26, src:"/photos/IMG_2286.jpg", cat:"Concerts", subcat:"marQ", title:"", portrait:true,  highlight:true  },
-  { id:27, src:"/photos/IMG_2338.jpg", cat:"Concerts", subcat:"marQ", title:"", portrait:false, highlight:false },
-  { id:28, src:"/photos/IMG_2429.jpg", cat:"Concerts", subcat:"marQ", title:"", portrait:false, highlight:true  },
-  { id:29, src:"/photos/IMG_2558.jpg", cat:"Concerts", subcat:"marQ", title:"", portrait:false, highlight:false },
-  { id:30, src:"/photos/IMG_2620.jpg", cat:"Concerts", subcat:"marQ", title:"", portrait:false, highlight:false },
+  { id:24, src:"/photos/IMG_2254.jpg", cat:"Concerts",  subcat:"marQ",              title:"", portrait:true,  highlight:false },
+  { id:25, src:"/photos/IMG_2283.jpg", cat:"Concerts",  subcat:"marQ",              title:"", portrait:true,  highlight:false },
+  { id:26, src:"/photos/IMG_2286.jpg", cat:"Concerts",  subcat:"marQ",              title:"", portrait:true,  highlight:true  },
+  { id:27, src:"/photos/IMG_2338.jpg", cat:"Concerts",  subcat:"marQ",              title:"", portrait:false, highlight:false },
+  { id:28, src:"/photos/IMG_2429.jpg", cat:"Concerts",  subcat:"marQ",              title:"", portrait:false, highlight:true  },
+  { id:29, src:"/photos/IMG_2558.jpg", cat:"Concerts",  subcat:"marQ",              title:"", portrait:false, highlight:false },
+  { id:30, src:"/photos/IMG_2620.jpg", cat:"Concerts",  subcat:"marQ",              title:"", portrait:false, highlight:false },
 
-  // ── CONCERTS: Bytes and Beats ────────────────────────────────
-  { id:31, src:"/photos/IMG_1260.jpg", cat:"Assorted", subcat:"", title:"", portrait:true,  highlight:false },
-  { id:32, src:"/photos/IMG_1395.jpg", cat:"Assorted", subcat:"", title:"", portrait:true,  highlight:false },
+  // ── EVENTS: TGEX 2026 ────────────────────────────────────────
+  { id:33, src:"/photos/DSC07594.jpg", cat:"Events",    subcat:"TGEX 2026",         title:"", portrait:true,  highlight:true  },
+  { id:34, src:"/photos/DSC08157.jpg", cat:"Events",    subcat:"TGEX 2026",         title:"", portrait:false, highlight:true  },
+  { id:35, src:"/photos/DSC08421.jpg", cat:"Events",    subcat:"TGEX 2026",         title:"", portrait:true,  highlight:false },
+  { id:36, src:"/photos/DSC03989.jpg", cat:"Events",    subcat:"TGEX 2026",         title:"", portrait:false, highlight:false },
+  { id:37, src:"/photos/DSC04034.jpg", cat:"Events",    subcat:"TGEX 2026",         title:"", portrait:false, highlight:true  },
+  { id:38, src:"/photos/DSC04039.jpg", cat:"Events",    subcat:"TGEX 2026",         title:"", portrait:false, highlight:true  },
+  { id:39, src:"/photos/DSC04044.jpg", cat:"Events",    subcat:"TGEX 2026",         title:"", portrait:true,  highlight:false },
 
-  // ── EVENTS: TGEX 2026 (Lily) ─────────────────────────────────
-  { id:33, src:"/photos/DSC07594.jpg", cat:"Events", subcat:"TGEX 2026", title:"", portrait:true,  highlight:true  },
-  { id:34, src:"/photos/DSC08157.jpg", cat:"Events", subcat:"TGEX 2026", title:"",  portrait:false, highlight:true  },
-  { id:35, src:"/photos/DSC08421.jpg", cat:"Events", subcat:"TGEX 2026", title:"",          portrait:true,  highlight:false },
-
-  // ── EVENTS: TGEX 2026 (Tuonoto panel) ────────────────────────
-  { id:36, src:"/photos/DSC03989.jpg", cat:"Events", subcat:"TGEX 2026", title:"", portrait:false, highlight:false },
-  { id:37, src:"/photos/DSC04034.jpg", cat:"Events", subcat:"TGEX 2026", title:"", portrait:false, highlight:true },
-  { id:38, src:"/photos/DSC04039.jpg", cat:"Events", subcat:"TGEX 2026", title:"", portrait:false, highlight:true  },
-  { id:39, src:"/photos/DSC04044.jpg", cat:"Events", subcat:"TGEX 2026", title:"", portrait:true,  highlight:false },
-
-  // ── EVENTS: KOTX (dance) ─────────────────────────────────────
-  { id:40, src:"/photos/DSC09313.jpg", cat:"Events", subcat:"KOTX",      title:"", portrait:true,  highlight:false },
-  { id:41, src:"/photos/DSC09334.jpg", cat:"Events", subcat:"KOTX",      title:"", portrait:true,  highlight:true  },
-  { id:42, src:"/photos/DSC09485.jpg", cat:"Events", subcat:"KOTX",      title:"", portrait:true,  highlight:false },
+  // ── EVENTS: KOTX ─────────────────────────────────────────────
+  { id:40, src:"/photos/DSC09313.jpg", cat:"Events",    subcat:"KOTX",              title:"", portrait:true,  highlight:false },
+  { id:41, src:"/photos/DSC09334.jpg", cat:"Events",    subcat:"KOTX",              title:"", portrait:true,  highlight:true  },
+  { id:42, src:"/photos/DSC09485.jpg", cat:"Events",    subcat:"KOTX",              title:"", portrait:true,  highlight:false },
 ];
-
-// Sanity check: exactly 14 highlights
-// Cosplay:3  Portraits:3  Concerts:4  Events:4  = 14 ✓
 
 const CONTACT = [
   ["Email",     "parmarvishva2015@gmail.com"],
@@ -152,7 +152,6 @@ export default function Portfolio() {
   const [contact,    setContact]    = useState(false);
   const inputRef = useRef(null);
 
-  // Round-robin through categories so different styles sit next to each other
   const interleave = (photos) => {
     const groups = {};
     photos.forEach(p => { if (!groups[p.cat]) groups[p.cat] = []; groups[p.cat].push(p); });
@@ -163,7 +162,7 @@ export default function Portfolio() {
       const key = keys[i % keys.length];
       if (groups[key]?.length) result.push(groups[key].shift());
       i++;
-      if (i > photos.length * keys.length) break; // safety
+      if (i > photos.length * keys.length) break;
     }
     return result;
   };
@@ -268,7 +267,6 @@ export default function Portfolio() {
 
       <div style={{ minHeight:"100vh", background:G.white, fontFamily:G.body, color:G.ink }}>
 
-        {/* Header */}
         <header style={{ position:"sticky", top:0, zIndex:50, background:"rgba(238,238,238,0.92)", backdropFilter:"blur(10px)", borderBottom:`1px solid ${G.border}`, padding:"0 28px", height:54, display:"flex", alignItems:"center", justifyContent:"space-between" }}>
           <span style={{ fontFamily:G.sans, fontSize:15, fontWeight:700, letterSpacing:"-0.01em", cursor:"pointer" }} onClick={()=>setPage({type:"highlights"})}>
             Vishva Parmar
@@ -293,7 +291,6 @@ export default function Portfolio() {
           </nav>
         </header>
 
-        {/* Highlights */}
         {page.type === "highlights" && (
           <div className="pad" style={{ padding:"20px 12px 64px" }}>
             <p className="section-label" style={{ marginTop:8, marginLeft:4 }}>Highlights</p>
@@ -305,7 +302,6 @@ export default function Portfolio() {
           </div>
         )}
 
-        {/* Albums list */}
         {page.type === "albums" && (
           <div className="pad" style={{ padding:"20px 12px 64px" }}>
             <p className="section-label" style={{ marginTop:8, marginLeft:4 }}>Albums</p>
@@ -319,7 +315,6 @@ export default function Portfolio() {
           </div>
         )}
 
-        {/* Album detail */}
         {page.type === "album" && (
           <div className="pad" style={{ padding:"28px 12px 64px" }}>
             <div style={{ padding:"0 4px 16px" }}>
@@ -361,7 +356,6 @@ export default function Portfolio() {
           </div>
         )}
 
-        {/* Sub-album */}
         {page.type === "subalbum" && (
           <div className="pad" style={{ padding:"28px 12px 64px" }}>
             <div style={{ padding:"0 4px 20px" }}>
@@ -375,7 +369,6 @@ export default function Portfolio() {
           </div>
         )}
 
-        {/* Lightbox */}
         {lightbox && (
           <div role="dialog" aria-modal="true"
             style={{ position:"fixed", inset:0, zIndex:200, background:"rgba(8,8,8,0.96)", display:"flex", alignItems:"center", justifyContent:"center" }}
