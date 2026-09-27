@@ -53,7 +53,6 @@ const PHOTOS = [
   { id:14, src:"/photos/DSC06290.jpg", cat:"Concerts",  subcat:"Ascend",            title:"", portrait:true,  highlight:false },
   { id:15, src:"/photos/DSC06628.jpg", cat:"Concerts",  subcat:"Ascend",            title:"", portrait:true,  highlight:true  },
   { id:16, src:"/photos/DSC06675.jpg", cat:"Concerts",  subcat:"Ascend",            title:"", portrait:false, highlight:true  },
-  { id:17, src:"/photos/DSC06678.jpg", cat:"Concerts",  subcat:"Ascend",            title:"", portrait:false, highlight:false },
   { id:18, src:"/photos/DSC06884.jpg", cat:"Concerts",  subcat:"Ascend",            title:"", portrait:true,  highlight:true  },
   { id:19, src:"/photos/DSC06886.jpg", cat:"Concerts",  subcat:"Ascend",            title:"", portrait:true,  highlight:false },
   { id:20, src:"/photos/DSC06894.jpg", cat:"Concerts",  subcat:"Ascend",            title:"", portrait:true,  highlight:false },
@@ -74,8 +73,6 @@ const PHOTOS = [
   { id:34, src:"/photos/DSC08157.jpg", cat:"Events",    subcat:"TGEX 2026",         title:"", portrait:false, highlight:true  },
   { id:35, src:"/photos/DSC08421.jpg", cat:"Events",    subcat:"TGEX 2026",         title:"", portrait:true,  highlight:false },
   { id:36, src:"/photos/DSC03989.jpg", cat:"Events",    subcat:"TGEX 2026",         title:"", portrait:false, highlight:false },
-  { id:37, src:"/photos/DSC04034.jpg", cat:"Events",    subcat:"TGEX 2026",         title:"", portrait:false, highlight:true  },
-  { id:38, src:"/photos/DSC04039.jpg", cat:"Events",    subcat:"TGEX 2026",         title:"", portrait:false, highlight:true  },
   { id:39, src:"/photos/DSC04044.jpg", cat:"Events",    subcat:"TGEX 2026",         title:"", portrait:true,  highlight:false },
 
   // ── EVENTS: KOTX ─────────────────────────────────────────────
