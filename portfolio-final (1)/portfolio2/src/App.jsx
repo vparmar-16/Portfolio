@@ -64,7 +64,6 @@ const PHOTOS = [
   // ── CONCERTS: marQ ───────────────────────────────────────────
   { id:24, src:"/photos/IMG_2254.jpg", cat:"Concerts",  subcat:"marQ",              title:"", portrait:true,  highlight:false },
   { id:25, src:"/photos/IMG_2283.jpg", cat:"Concerts",  subcat:"marQ",              title:"", portrait:true,  highlight:false },
-  { id:26, src:"/photos/IMG_2286.jpg", cat:"Concerts",  subcat:"marQ",              title:"", portrait:true,  highlight:true  },
   { id:27, src:"/photos/IMG_2338.jpg", cat:"Concerts",  subcat:"marQ",              title:"", portrait:false, highlight:false },
   { id:28, src:"/photos/IMG_2429.jpg", cat:"Concerts",  subcat:"marQ",              title:"", portrait:false, highlight:true  },
   { id:29, src:"/photos/IMG_2558.jpg", cat:"Concerts",  subcat:"marQ",              title:"", portrait:false, highlight:false },
