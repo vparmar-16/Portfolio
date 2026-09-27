@@ -48,7 +48,7 @@ const PHOTOS = [
   { id:52, src:"/photos/IMG_2978.jpg", cat:"Concerts",  subcat:"Ken Carson",        title:"", portrait:false, highlight:false },
 
   // ── CONCERTS: Ascend ─────────────────────────────────────────
-  { id:12, src:"/photos/DSC04664.jpg", cat:"Concerts",  subcat:"Ascend",            title:"", portrait:true,  highlight:false },
+  { id:12, src:"/photos/DSC04664.jpg", cat:"Concerts",  subcat:"Ascend",            title:"", portrait:true,  highlight:true },
   { id:13, src:"/photos/DSC06160.jpg", cat:"Concerts",  subcat:"Ascend",            title:"", portrait:true,  highlight:false },
   { id:14, src:"/photos/DSC06290.jpg", cat:"Concerts",  subcat:"Ascend",            title:"", portrait:true,  highlight:false },
   { id:15, src:"/photos/DSC06628.jpg", cat:"Concerts",  subcat:"Ascend",            title:"", portrait:true,  highlight:true  },
